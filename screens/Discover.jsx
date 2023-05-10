@@ -44,14 +44,15 @@ const Discover = () => {
       bl_lat,
       tr_lat,
       bl_lon,
-      tr_lon
+      tr_lon,
+      type
     ).then((data) => {
       setmainData(data);
       setInterval(() => {
         setIsLoading(false);
       }, 2000);
     });
-  }, [bl_lat, tr_lat, bl_lon, tr_lon]);
+  }, [bl_lat, tr_lat, bl_lon, tr_lon, type]);
 
   return (
     <SafeAreaView className="flex-1 bg-white relative">
@@ -170,6 +171,7 @@ const Discover = () => {
                         }
                         title={data?.name}
                         location={data?.location_string}
+                        data={data}
                       />
                       </View>
                     );

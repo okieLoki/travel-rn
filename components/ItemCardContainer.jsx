@@ -1,8 +1,10 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
-const ItemCardContainer = ({ image, title, location }) => {
+const ItemCardContainer = ({ image, title, location, data }) => {
+  const navigation = useNavigation()
   return (
     <>
       {title ? (
@@ -22,7 +24,8 @@ const ItemCardContainer = ({ image, title, location }) => {
             elevation: 4,
           }}
         >
-          <TouchableOpacity className="rounded-md space-y-2 px-4 py-2">
+          <TouchableOpacity className="rounded-md space-y-2 px-4 py-2"
+           onPress={() => navigation.navigate("ItemScreen", { param: data })}>
             <Image
               source={{ uri: image }}
               className="mt-1 w-[120px] h-[120px] object-cover rounded-md"
