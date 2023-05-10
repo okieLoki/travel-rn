@@ -20,6 +20,6 @@ Go Travel is a React Native application that allows you to search for nearby pla
 
 ## Screenshots:
 
-![App Screenshot 1](./md-files/app1.jpeg)
-![App Screenshot 2](./md-files//app2.jpeg)
-![App Preview](./md-files/Go.gif)
+<img src='./md-files/app1.jpeg' width=200>
+<img src='./md-files/app2.jpeg' width=200>
+<img src='./md-files/Go.gif' width=200>
